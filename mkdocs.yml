@@ -1,0 +1,77 @@
+site_name: NASA API Documentation
+theme:
+  name: material
+  icon:
+    logo: simple/nasa
+    annotation: material/arrow-right-circle 
+  font:
+    text: Ubuntu
+    code: Roboto Mono
+  palette:
+    primary: red
+    accent: blue
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+    - content.code.select
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      name: Owen Plimer
+  
+nav:
+  - Home: index.md
+  - Services:
+    - services/index.md
+
+    - Astronomy Picture Of the Day: 
+      - Home: services/apod/index.md
+      - Service: services/apod/service.md
+
+    - Satellite Situation Center: 
+      - Home: services/ssc/index.md
+      - Get WADL: services/ssc/getWADL.md
+      - Get Observatories: services/ssc/getObservatories.md
+      - Get Client Example: services/ssc/getClientExample.md
+      - Get SPASE Observatories: services/ssc/getSPASEObservatories.md
+      - Get Ground Stations: services/ssc/getGroundStations.md
+      - Get Locations: services/ssc/getLocations.md
+      - Get Graphs: services/ssc/getGraphs.md
+      - Get Conjunctions: services/ssc/getConjunctions.md
+
+    - Mars Rover Photos:
+      - Home: services/mrp/index.md
+      - Rovers and Cameras: services/mrp/roversAndCameras.md
+      - Rover Mission Manifests: services/mrp/missionManifests.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+
+copyright: Copyright &copy; 2025 Owen Plimer
